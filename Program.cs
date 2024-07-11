@@ -40,6 +40,27 @@ namespace HW2_Part1
         /* 1. Draw a stack diagram showing the state of the program just before the last instance
             of Prod completes.What is the output of this program? */
 
+        /* 
+         * Prod(1, 4)
+        | 
+        |  -> Prod(1, 3)
+        |      |
+        |      |  -> Prod(1, 2)
+        |      |      |
+        |      |      |  -> Prod(1, 1) => returns 1
+        |      |      |
+        |      |      |  recurse = 1
+        |      |      |  result = 2 * 1 = 2 => returns 2
+        |      |      |
+        |      |      recurse = 2
+        |      |      result = 3 * 2 = 6 => returns 6
+        |      |
+        |      recurse = 6
+        |      result = 4 * 6 = 24 => returns 24
+        |
+        recurse = 24 (final result)
+         */
+
         /* Stack Diagram
          * 1. Initial Call: 'Prod(1, 4)'
          *  - Parameters: 'm = 1', 'n = 4'
